@@ -21,7 +21,7 @@ def all_species(filename):
         file_species = line.rstrip().split("|")[1]
         species.add(file_species)
 
-        
+
     return species    
 
 
@@ -175,3 +175,22 @@ def find_likeminded_villagers(filename, villager_name):
 
     return villagers_names
             
+
+### Alternate solution
+    # likeminded = set()
+
+    # target_personality = None
+    # for villager_data in all_data(filename):
+    #     name, _, personality = villager_data[:3]
+
+    #     if name == villager_name:
+    #         target_personality = personality
+    #         break
+
+    # if target_personality:
+    #     for villager_data in all_data(filename):
+    #         name, _, personality = villager_data[:3]
+    #         if personality == target_personality:
+    #             likeminded.add(name)
+
+    # return likeminded
